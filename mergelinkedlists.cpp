@@ -1,5 +1,7 @@
 #include <iostream>
 
+/** Given two sorted linked lists, create a new merged linked list. **/
+
 struct Node {
 	Node(int x):value(x){}
 	int value;

@@ -14,7 +14,7 @@ Solutions to various coding problems, writtin in C++.
 
 <h2>Sorting</h2>
 <ul>
-	<li><a href=""></a></li>
+	<li><a href="https://github.com/mwhiter/code_problems/blob/master/sorting.cpp">Quicksort()</a></li>
 </ul>
 
 <h2>Strings</h2>

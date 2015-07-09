@@ -9,7 +9,7 @@ const char* reverse(const char* str) {
 	for(int i=0; i<strlen(str);i++)
 		reversed[i] = str[strlen(str)-1-i];
 	
-	return str;
+	return reversed;
 }
 
 // remove whitespace from a string (in place)

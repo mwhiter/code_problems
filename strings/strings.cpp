@@ -14,19 +14,27 @@ const char* reverse(const char* str) {
 
 // remove whitespace from a string (in place)
 void stripWhiteSpace(char* str) {
-	// implement
+	int j;
+	for(int i=0; str[i] != '\0'; i++) {
+		str[j] = str[i];
+		
+		// increment j if it is not on a space
+		if(!isspace(str[j]))
+			j++;
+	}
+	
+	str[j] = '\0';
 }
 
 void removeChar(char* str, int index) {
 	int size = strlen(str);
 	if(index < 0 || index >= size) return;
 	
-	for(int i = index; i < size-2; i++) {
+	for(int i = index; i < size-1; i++) {
 		char temp = str[i];
 		str[i] = str[i+1];
 		str[i+1] = temp;
 	}
-	
 	str[size-1] = '\0';
 }
 
@@ -67,8 +75,11 @@ int findFirstUnique(char* str) {
 
 int main() {
 	char str1[] = "AABcCCDDeEeFAa";
+	char str2[] = "Henry has  a little dog  ";
+	stripWhiteSpace(str2);
 	std::cout << "(Reverse) Hello: " << reverse("Hello!") << std::endl;
 	std::cout << "(Remove Duplicates) AABcCCDDeEeFAa: " << removeDuplicates(str1) << std::endl;
 	std::cout << "(Find first unique) AbcDceF: " << findFirstUnique("AbcDceF") << std::endl;
+	std::cout << "(Remove whitespace) Henry has  a little dog: " << str2 << std::endl;
 	return 0;
 }
